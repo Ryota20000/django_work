@@ -1,0 +1,9 @@
+{% if page_obj.has_previous %}
+«
+{% endif %} {% for link_page in page_obj.paginator.page_range %} {% if link_page == page_obj.number %}
+{{ link_page }}
+{% else %}
+{{ link_page }}
+{% endif %} {% endfor %} {% if page_obj.has_next %}
+»
+{% endif %}
